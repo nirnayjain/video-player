@@ -1,0 +1,50 @@
+#user {
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+#user td,
+#user th {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+#user tr:hover {
+  background-color: #ddd;
+}
+
+#user th {
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(2, 12, 10);
+  color: white;
+}
+
+.opration {
+  text-align: center;
+}
+
+.button {
+  border: none;
+  outline: none;
+  font-size: 11px;
+  font-family: "Quicksand", sans-serif;
+  color: #f44336;
+  padding: 3px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #f44336;
+  background-color: transparent;
+}
+
+.button:active {
+  border: 1px solid blue;
+}
+@media only screen and (max-width: 768px) {
+  #user {
+    width: 100%;
+  }
+}
