@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
   
     transition: "transform 0.20s ease-in-out",
-    height:'320px',
+    height:'340px',
     width:'280px',
     border:'2px solid black',
     borderRadius:'10px',
