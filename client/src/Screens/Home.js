@@ -72,9 +72,12 @@ const Home = () => {
     }
     const handleSubmit = async () => {
         if(movieData.name===''||movieData.release===''||movieData.image===''||movieData.video===''||movieData.language==='')
+        {
         alert("Please fill all required field")
+        return;
+        }
         try {
-            await axios.post('http://localhost:4000/api/user/register', movieData)
+            await axios.post("/api/user/register", movieData)
             setMovieData("")
             history.push('/movies')
         }

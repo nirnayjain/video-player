@@ -6,7 +6,7 @@ import axios from 'axios'
 import MoviesCard from '../Components/moviesCard'
 const Movies = () => {
     const [query, setQuery] = useState({
-        pageSize: 4,
+        pageSize: 1,
         page:1
     })
     const [movies, setMovies] = useState(null)
@@ -16,7 +16,7 @@ const Movies = () => {
     }, [query])
     const getMovies = async () => {
         try {
-            const response = await axios.post("http://localhost:4000/api/user/viewMovie",query)
+            const response = await axios.post("/api/user/viewMovie",query)
             setMovies(response.data.users)
             setTotalCount(Math.ceil(response.data.total / query.pageSize));
 
