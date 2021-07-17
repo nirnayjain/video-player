@@ -37,16 +37,19 @@ app.use(cors({
 
 app.use('/api/user',route)
 const __dirname=path.resolve()
-// if(process.env.NODE_ENV==='PRODUCTION')
-// {
+if(process.env.NODE_ENV==='PRODUCTION')
+{
     app.use(express.static(path.join(__dirname, '/client/build')))
     app.get('*',(req,res)=>{
         res.sendFile(path.resolve(__dirname,'client','build','index.html'))
     })
+}
+else{
 
-// app.get('/',(req,res)=>{
-//     res.send('Api is running...')
-// })
+app.get('/',(req,res)=>{
+    res.send('Api is running...')
+})
+}
 
 const PORT = process.env.PORT || 4000
 app.listen(PORT  ,console.log(`Server running  on port ${PORT}`))
