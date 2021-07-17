@@ -21,7 +21,7 @@ const Home = () => {
     const history=useHistory()
     const data = {
         name: '',
-        release: null,
+        release: '',
         language: '',
         image: '',
         video: ''
@@ -110,8 +110,8 @@ const Home = () => {
                         fullWidth
                         required
                         id='release'
-                         defaultValue={currentDate}
-                        label='Release Date'
+                        
+                        placeholder="Enter Release Date"
                         type='date'
                         variant='standard'
                         value={movieData.release}
