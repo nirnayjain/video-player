@@ -1,7 +1,7 @@
 import React from 'react'
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import Home from './Screens/Home'
-import Login from './Screens/Login'
+import Movies from './Screens/Movies'
  
 function App() {
    return (
@@ -9,8 +9,8 @@ function App() {
  
      
       <Switch>
-         <Route exact path="/" component={Login} />
-          <Route path="/home" component={Home}/>
+         <Route exact path="/" component={Home} />
+          <Route path="/movies" component={Movies}/>
            
             
       </Switch>

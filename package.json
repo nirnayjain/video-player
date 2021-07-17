@@ -5,19 +5,25 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-     "start": "node backend/Server.js",
+    "start": "node backend/Server.js",
     "server": "nodemon  backend/Server.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"", 
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "heroku-postbuild":"NPM CONFIG_PRODUCTION=false npm install --prefix client && npm run-script build  --prefix client"
+
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^4.12.1",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "dotenv": "^9.0.2",
     "express": "^4.17.1",
+    "firebase": "^8.7.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.9",
     "nodemon": "^2.0.7"
