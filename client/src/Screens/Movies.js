@@ -13,7 +13,7 @@ const Movies = () => {
     const [totalCount, setTotalCount] = useState(null)
     useEffect(() => {
         getMovies()
-    }, [setQuery])
+    }, [query])
     const getMovies = async () => {
         try {
             const response = await axios.post("http://localhost:4000/api/user/viewMovie",query)
