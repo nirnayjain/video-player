@@ -32,7 +32,7 @@ app.use(cookieParser())
  app.use(express.json())
 app.use(cors({
     credentials:true,
-    origin:'http://localhost:3000'
+    origin:'https://powerful-castle-62704.herokuapp.com'
 }))
 
 app.use('/api/user',route)
