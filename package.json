@@ -7,12 +7,13 @@
   "scripts": {
     "start": "node backend/Server.js",
     "server": "nodemon  backend/Server.js",
-    "client": "npm start --prefix client",
+    "build":"cd client && npm run build",
+    "install-client":"cd client && npm install",
+    "client": "cd client && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
-     "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
+    "heroku-postbuild": "npm run install-client && npm run build"
+    
   },
   "author": "",
   "license": "ISC",
