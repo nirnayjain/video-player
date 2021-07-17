@@ -40,7 +40,8 @@ marginRight:10,
 marginTop:10,
 padding:0,
 display:'flex',
-justifyContent:'space-between'
+flexDirection:'column',
+
    
   },
   // text:{
@@ -137,7 +138,7 @@ let releaseDate=year+'-' + month + '-'+dt;
             
               <Typography
                 gutterBottom
-                variant="body1"
+                variant="body2"
                
                
               >
