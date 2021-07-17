@@ -6,7 +6,7 @@ import axios from 'axios'
 import MoviesCard from '../Components/moviesCard'
 const Movies = () => {
     const [query, setQuery] = useState({
-        pageSize: 1,
+        pageSize: 4,
         page:1
     })
     const [movies, setMovies] = useState(null)
