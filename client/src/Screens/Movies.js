@@ -56,7 +56,8 @@ const Movies = () => {
                                                 setQuery({
                                                     ...query,
                                                     page: value 
-                                                })
+                                                });
+                                                setMovies(null)
                                             }}
                                             color="primary" />
                                     </Grid>

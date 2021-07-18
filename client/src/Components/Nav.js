@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         flexGrow: 1,
-        cursor:'pointer'
+        
     },
 }));
 
@@ -30,7 +30,7 @@ export default function Nav() {
             <AppBar position="static">
                 <Toolbar>
                    
-                        <Typography variant="h6" className={classes.title}  onClick={()=>history.push('/')}>
+                        <Typography variant="h6" className={classes.title}  style={{cursor:'pointer'}} onClick={()=>history.push('/')}>
 
                             Home
 
