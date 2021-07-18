@@ -112,12 +112,20 @@ let releaseDate=year+'-' + month + '-'+dt;
             </>
               :
               <>
-                       <video width="280" height="200" controls>
+                       {/* <video width="280" height="200" controls>
   <source src={video} type="video/mp4" />
 
  
 
-</video>
+</video> */}
+<CardMedia
+component='video'
+style={{objectFit:'cover'}}
+src={video}
+width="280"
+height="200"
+controls
+/>
  <div className={classes.play}>
               < PauseCircleFilledIcon fontSize="large" onClick ={()=>setPlay(false)}/>
               
