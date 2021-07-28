@@ -1,15 +1,9 @@
 import express from 'express'
 import User from '../Model/User.js'
-import jwt from 'jsonwebtoken'
 import dotenv from 'dotenv'
 const router=express.Router()
 
 router.post('/register',async(req,res)=>{
-
-//  const emailExist=await User.findOne({email:req.body.email})
-//      if(emailExist) return res.status(400).send("Email already registered")
-    
-    //   const token=jwt.sign({email:req.body.email,password:req.body.password},process.env.SECRET_KEY)
 
     const user=new User({
         
@@ -21,12 +15,12 @@ router.post('/register',async(req,res)=>{
     })
     try{
     const savedUser=await user.save()
-     res.send({status:"ok"})
+     res.status(201).send({status:"ok"})
     
     }
     
     catch(err){
-        res.json({message:err})
+        res.status(400).json({message:err})
         console.log(err)
     }
     
@@ -40,7 +34,7 @@ router.post('/viewMovie',async(req,res)=>{
           
           const totalRecords= await User.countDocuments()
    const users= await User.find().sort({ _id: -1 }).skip((req.body.page-1)*req.body.pageSize).limit(req.body.pageSize)
-   res.json({
+   res.status(200).json({
        users,
        total:totalRecords
    })
