@@ -34,13 +34,13 @@ app.use(cookieParser())
 
 app.use('/api/user',route)
 const __dirname=path.resolve()
-if(process.env.NODE_ENV==='production')
+if(process.env.NODE_ENV!='development')
 {
     app.use(express.static('client/build'));
      app.get('*',(req,res)=>{
         res.sendFile(path.resolve(__dirname,'client','build','index.html'))
     })
-   
+
 }
 else{
 
