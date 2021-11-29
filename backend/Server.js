@@ -34,7 +34,7 @@ app.use(cookieParser())
 
 app.use('/api/user',route)
 const __dirname=path.resolve()
-if(process.env.NODE_ENV==='development')
+if(process.env.NODE_ENV==='production')
 {
     app.use(express.static('client/build'));
      app.get('*',(req,res)=>{
